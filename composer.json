@@ -1,4 +1,14 @@
 {
+    "name": "phpsouthwales/slim-bootstrap",
+    "description": "A Slim 3 bootstrap project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Steve McDougall",
+            "email": "juststevemcd@gmail.com",
+            "homepage": "https://github.com/PHPSouthWales/slim-bootstrap"
+        }
+    ],
     "require": {
         "slim/slim": "^3.10",
         "symfony/console": "^4.1"
