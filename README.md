@@ -2,6 +2,11 @@
 
 A Slim 3 bootstrap with console generators in place
 
+## Available Generators
+
+- `php slim make:command` Generate console commands
+- `php slim make:controller` Generate controllers
+
 ## To Do
 
 - Middleware Generators
