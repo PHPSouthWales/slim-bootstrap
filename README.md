@@ -1,5 +1,7 @@
 # Slim Boilerplate
 
+A Slim 3 bootstrap with console generators in place
+
 ## To Do
 
 - Middleware Generators
