@@ -1,6 +1,6 @@
-# Slim Boilerplate
+# Slim API Bootstrap
 
-A Slim 3 bootstrap with console generators in place
+A Slim 3 bootstrap for APIs with console generators in place
 
 ## Available Generators
 
