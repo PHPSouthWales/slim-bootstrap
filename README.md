@@ -12,7 +12,7 @@ A Slim 3 bootstrap for APIs with console generators in place
 - Middleware Generators
 - Middleware Loading
 - Configuration Loading
-- Mailables
+- ~~Mailables~~
 - Database
 - Database Migrations
 - Database Migration Generators
