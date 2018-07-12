@@ -11,7 +11,7 @@ A Slim 3 bootstrap for APIs with console generators in place
 
 - Middleware Generators
 - Middleware Loading
-- Configuration Loading
+- ~~Configuration Loading~~
 - ~~Mailables~~
 - ~~Database~~
 - Database Migrations
