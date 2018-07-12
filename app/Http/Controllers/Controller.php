@@ -6,10 +6,10 @@ use Interop\Container\ContainerInterface;
 
 class Controller
 {
-    protected $c;
+    protected $container;
 
-    public function __construct(ContainerInterface $c)
+    public function __construct(ContainerInterface $container)
     {
-        $this->c = $c;
+        $this->container = $container;
     }
 }
