@@ -9,7 +9,7 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class ConsoleGeneratorCommand extends Command
+class MailableGeneratorCommand extends Command
 {
     use Generatable;
 
@@ -18,14 +18,14 @@ class ConsoleGeneratorCommand extends Command
      *
      * @var string
      */
-    protected $command = 'make:command';
+    protected $command = 'make:mail';
 
     /**
      * Command Description
      *
      * @var string
      */
-    protected $description = 'Genereate Console Command';
+    protected $description = 'Genereate Mailable Command';
 
     /**
      * Handle the command
@@ -39,7 +39,7 @@ class ConsoleGeneratorCommand extends Command
     {
         $base = __DIR__ . '/../';
         $path = $base . '/';
-        $namespace = 'App\\Console\\Commands';
+        $namespace = 'App\\Mail';
 
         $fileParts = explode('\\', $this->argument('name'));
         $fileName = array_pop($fileParts);
@@ -58,17 +58,17 @@ class ConsoleGeneratorCommand extends Command
         $target = "{$path}/{$fileName}.php";
 
         if (file_exists($target)) {
-            return $this->error('Controller already exists');
+            return $this->error('Maiable already exists');
         }
 
-        $stub = $this->generateStub('command', [
+        $stub = $this->generateStub('mailable', [
             'DummyClass' => $fileName,
-            'DummyNamespace' => $namespace
+            'DummyNamespace' => $namespace,
         ]);
 
         file_put_contents($target, $stub);
 
-        $this->info('Command generated');
+        $this->info('Mailable generated');
     }
 
     /**

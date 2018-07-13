@@ -20,6 +20,7 @@ class Kernel
      */
     protected $defaultCommands = [
         \App\Console\Commands\ConsoleGeneratorCommand::class,
+        \App\Console\Commands\MailableGeneratorCommand::class,
         \App\Console\Commands\ControllerGeneratorCommand::class
     ];
 
