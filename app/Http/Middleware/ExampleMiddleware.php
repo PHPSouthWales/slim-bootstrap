@@ -19,7 +19,6 @@ class ExampleMiddleware
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next) : ResponseInterface
     {
         $response = $next($request, $response);
-
         return $response;
     }
 }
