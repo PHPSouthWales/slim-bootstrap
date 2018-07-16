@@ -16,7 +16,10 @@
         "symfony/var-dumper": "^4.1",
         "swiftmailer/swiftmailer": "^6.1",
         "slim/twig-view": "^2.4",
-        "illuminate/database": "^5.6"
+        "illuminate/database": "^5.6",
+        "symfony/translation": "^4.1",
+        "hassankhan/config": "^1.0",
+        "symfony/finder": "^4.1"
     },
     "autoload": {
         "psr-4": {

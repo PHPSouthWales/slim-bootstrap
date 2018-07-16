@@ -2,6 +2,33 @@
 
 $container = $app->getContainer();
 
+$container['config'] = function () {
+    return new \Noodlehaus\Config(__DIR__ . '/../config');
+};
+
+$container['translator'] = function ($container) {
+    $config = $container->config;
+
+    $translator = new \Symfony\Component\Translation\Translator(
+        $config->get('app.locale')
+    );
+    $translator->setFallbackLocales([$config->get('app.default_locale')]);
+    $translator->addLoader('array', new \Symfony\Component\Translation\Loader\ArrayLoader);
+
+    $finder = new \Symfony\Component\Finder\Finder;
+    $langDirs = $finder->directories()->ignoreUnreadableDirs()->in(__DIR__ . '/../resources/lang');
+
+    array_map(function ($dir) {
+        $translator->addResource(
+            'array',
+            (new \Noodlehaus\Config($dir))->all(),
+            $dir->getRelativePathName()
+        );
+    }, $langDirs);
+
+    return $translator;
+};
+
 $container['view'] = function ($container) {
     $view = new \Slim\Views\Twig(__DIR__ . '/../resources/views', [
         'cache' => $container->settings['views']['cache']
