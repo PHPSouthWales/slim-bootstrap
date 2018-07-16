@@ -10,7 +10,7 @@ A Slim 3 bootstrap for APIs with console generators in place
 ## To Do
 
 - ~~Middleware Generators~~
-- Middleware Loading
+- ~~Middleware Loading~~
 - ~~Configuration Loading~~
 - ~~Mailables~~
 - ~~Mailable Generrator~~
