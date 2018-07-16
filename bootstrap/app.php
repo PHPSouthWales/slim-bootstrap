@@ -43,5 +43,4 @@ $app = new \Slim\App([
 
 require __DIR__ . '/container.php';
 
-$kernel = new \App\Http\Kernel($app);
-$kernel->boot();
+$kernel = (new \App\Http\Kernel($app))->boot();
