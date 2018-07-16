@@ -17,5 +17,5 @@ A Slim 3 bootstrap for APIs with console generators in place
 - ~~Database~~
 - Database Migrations
 - Database Migration Generators
-- Models
-- Model Generators
+- ~~Models~~
+- ~~Model Generators~~

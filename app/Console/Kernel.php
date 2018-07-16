@@ -19,6 +19,7 @@ class Kernel
      * @var array
      */
     protected $defaultCommands = [
+        \App\Console\Commands\ModelGeneratorCommand::class,
         \App\Console\Commands\ConsoleGeneratorCommand::class,
         \App\Console\Commands\MailableGeneratorCommand::class,
         \App\Console\Commands\ControllerGeneratorCommand::class,
