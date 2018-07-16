@@ -6,6 +6,9 @@ A Slim 3 bootstrap for APIs with console generators in place
 
 - `php slim make:command` Generate console commands
 - `php slim make:controller` Generate controllers
+- `php slim make:mail` Generate Mailable Class
+- `php slim make:middleware` Generate Http Middleware
+- `php slim make:mode` Generate Eloquent Model
 
 ## To Do
 
