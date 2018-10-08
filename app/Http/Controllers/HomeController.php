@@ -9,12 +9,12 @@ use Psr\Http\Message\ResponseInterface;
 
 class HomeController extends Controller
 {
-    public function index(RequestInterface $request, ResponseInterface $response)
+    public function __invoke(RequestInterface $request, ResponseInterface $response)
     {
-        $this->container->mail->to('test@test.com', 'Steve McDougall')
+        /*$this->container->mail->to('test@test.com', 'Steve McDougall')
             ->send(new WelcomeEmail([
                 'name' => 'Steve McDougall'
-            ]));
+            ]));*/
 
         return $response->withJson([
             'route' => 'home'
